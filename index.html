@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para mi voleibolista favorita</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+<body>
+  <main class="escena" id="escena">
+    <img src="imagen.jpg" alt="Gatito voleibolista" class="gatito-portada" id="gatitoPortada" />
+    <div class="decoracion-cancha" aria-hidden="true">
+      <span class="adorno flor f1">🌸</span>
+      <span class="adorno corazon c1">♥</span>
+      <span class="adorno flor f2">🌼</span>
+      <span class="adorno corazon c2">♡</span>
+      <span class="adorno flor f3">🌷</span>
+      <span class="adorno corazon c3">♥</span>
+      <span class="adorno flor f4">🌸</span>
+      <span class="adorno corazon c4">♡</span>
+    </div>
+    <section class="intro" id="intro">
+      <div class="pista-animacion">
+       <svg class="balon-svg" id="balon" viewBox="0 0 140 140" aria-label="Balón de vóley">
+  <defs>
+    <radialGradient id="voleyBase" cx="32%" cy="28%" r="72%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="68%" stop-color="#f3f5f8" />
+      <stop offset="100%" stop-color="#c8d0dc" />
+    </radialGradient>
+    <clipPath id="recorteBalon">
+      <circle cx="70" cy="70" r="60" />
+    </clipPath>
+  </defs>
+
+  <!-- Cuerpo blanco con volumen -->
+  <circle cx="70" cy="70" r="60" fill="url(#voleyBase)" stroke="#1e293b" stroke-width="3.5" />
+
+  <!-- Paneles clásicos azul y amarillo de vóley -->
+  <g clip-path="url(#recorteBalon)">
+    <!-- Panel azul superior izquierdo -->
+    <path d="M 5 42 C 36 48, 56 30, 64 5 L 5 5 Z" fill="#1d6fd6" />
+    <!-- Panel azul inferior -->
+    <path d="M 38 134 C 52 104, 88 104, 114 128 L 38 134 Z" fill="#1d6fd6" />
+    <!-- Panel amarillo lateral derecho -->
+    <path d="M 96 10 C 88 42, 102 68, 135 76 L 135 10 Z" fill="#f4b41a" />
+
+    <!-- Líneas curvas de unión entre paneles -->
+    <path d="M 10 44 C 42 52, 62 32, 70 8" fill="none" stroke="#1e293b" stroke-width="3" />
+    <path d="M 12 86 C 48 74, 68 92, 62 132" fill="none" stroke="#1e293b" stroke-width="3" />
+    <path d="M 76 12 C 74 48, 96 68, 132 70" fill="none" stroke="#1e293b" stroke-width="3" />
+    <path d="M 24 62 C 58 56, 86 74, 116 108" fill="none" stroke="#1e293b" stroke-width="2.5" />
+  </g>
+
+  <!-- Brillo superior para darle aspecto 3D -->
+  <ellipse cx="48" cy="34" rx="18" ry="9" transform="rotate(-28 48 34)" fill="rgba(255,255,255,0.55)" />
+  <circle cx="70" cy="70" r="60" fill="none" stroke="#1e293b" stroke-width="3.5" />
+</svg>
+        <div class="linea-piso" id="lineaPiso"></div>
+      </div>
+
+      <button class="btn-abrir" id="btnAbrir" type="button" disabled>
+        Para la mejor voleibolista del mundo
+      </button>
+    </section>
+
+   <img src="imagen.jpg" alt="Gatito voleibolista" class="sticker-voley" />
+    <section class="carta oculta" id="carta">
+      <div class="tarjeta">
+        <p class="etiqueta">Día de la Voleibolista</p>
+        <h1>Admiro cada salto, cada entrega y tu corazón</h1>
+        <p class="mensaje" id="textoDedicatoria">
+          Sé que eres una chica muy disciplinada y con ganas de comerte el mundo.
+          Dentro de unos años yo quisiera verte jugar, verte sudada, ver tu disciplina
+          y lo increíble que eres dentro y fuera de la cancha.
+        </p>
+
+        <div class="acciones-tarjeta">
+          <button class="btn-siguiente" id="btnSiguiente" type="button">
+            Siguiente sorpresa →
+          </button>
+          <button class="btn-repetir" id="btnRepetir" type="button">
+            Ver animación de nuevo
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PANTALLA 3: Segunda dedicatoria + Canción favorita -->
+    <section class="carta oculta" id="paginaMusica">
+      <div class="tarjeta">
+        <p class="etiqueta">Para acompañarte siempre</p>
+        <h1>Una canción que me recuerda a ti</h1>
+        <p class="mensaje">
+          Se que no estoy cerca pero quiero que escuches esta cancion siempre antes de cada patido.
+          Quizas no es mucho por el momento pero es mi manera de estar a tu lado en esos dias importantes.
+        </p>
+
+        <!-- REPRODUCTOR DE CANCIÓN -->
+        <div class="caja-musica">
+          <div class="info-cancion">
+            <span class="icono-disco" id="iconoDisco">🎵</span>
+            <div>
+              <strong class="titulo-cancion">Alma Dinamita-Wos</strong>
+              <span class="artista-cancion">Wos</span>
+            </div>
+          </div>
+
+          <!-- Guarda el archivo MP3 en tu carpeta "trabajo Manu" como "cancion.mp3" -->
+          <audio id="reproductorAudio" controls preload="metadata">
+            <source src="ALMA DINAMITA.mp3" type="audio/mpeg" />
+            Tu navegador no soporta el reproductor de audio.
+          </audio>
+        </div>
+
+        <div class="acciones-tarjeta">
+    <div class="acciones-tarjeta">
+          <button class="btn-repetir" id="btnVolverCarta" type="button">
+            ← Volver atrás
+          </button>
+          <button class="btn-siguiente" id="btnIrACollage" type="button">
+            Último detalle →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PANTALLA 4: Collage de fotos + Despedida -->
+    <section class="carta oculta" id="paginaCollage">
+      <div class="tarjeta-collage">
+        <!-- El collage desordenado de 4 fotos -->
+        <div class="contenedor-collage">
+          <div class="marco-polaroid p1">
+            <img src="fotos.jpeg" alt="Momento 1" />
+            <span class="cinta">🌸</span>
+          </div>
+          <div class="marco-polaroid p2">
+            <img src="fotos2.jpeg" alt="Momento 2" />
+            <span class="cinta">🩹</span>
+          </div>
+          <div class="marco-polaroid p3">
+            <img src="fotos3.jpeg" alt="Momento 3" />
+            <span class="cinta">🎀</span>
+          </div>
+          <div class="marco-polaroid p4">
+            <img src="fotos4.jpeg" alt="Momento 4" />
+            <span class="cinta">💝</span>
+          </div>
+        </div>
+
+        <!-- Bloque de despedida abajo -->
+        <div class="bloque-despedida">
+          <p class="etiqueta-despedida">Para siempre</p>
+          <h2 class="texto-despedida">
+            MI LINDA VOlEIBOLISTA <3 eres aquello que mas me importa en esta vida y quiero que seas parte de mi vida
+            verte mas adelante en todos tus partidos y comprarte tu Monster blaco para que tengas energia. Te amo mi Kanelita
+          </h2>
+        </div>
+
+        <div class="acciones-tarjeta">
+          <button class="btn-repetir" id="btnVolverMusica" type="button">
+            ← Volver a la canción
+          </button>
+          <button class="btn-repetir" id="btnInicioTotal" type="button">
+            Volver al inicio 🔄
+          </button>
+        </div>
+      </div>
+    </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
